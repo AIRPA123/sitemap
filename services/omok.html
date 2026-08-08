@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>오목 게임 서비스 소개 | AIRPALAB</title>
+<meta name="description" content="AIRPALAB 오목 게임의 15x15 바둑판, 2인용 교대 플레이, 최근 착수 표시, 승리 판정 방식, 조작법과 향후 개선 계획을 안내합니다.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="AIRPALAB">
+<link rel="canonical" href="https://charming-gaufre-ebe320.netlify.app/services/omok.html">
+<link rel="stylesheet" href="../assets/style.css">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="오목 게임 서비스 소개 | AIRPALAB">
+<meta property="og:description" content="설치 없이 즐기는 15x15 2인용 오목 게임의 기능, 규칙, 기술적 특징을 소개합니다.">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5774158976002258" crossorigin="anonymous"></script>
+</head>
+<body>
+<header><div class="container nav">
+<a class="brand" href="../index.html"><span class="logo">A</span><span>AIRPALAB</span></a>
+<nav class="navlinks" id="navlinks">
+<a href="../index.html">홈</a>
+<a href="../index.html#services">웹 서비스</a>
+<a href="../blog/index.html">블로그</a>
+<a href="../about.html">소개</a>
+<a href="../privacy.html">개인정보처리방침</a>
+<a href="../terms.html">이용약관</a>
+</nav>
+<button class="menu" id="menu" aria-label="메뉴 열기">☰</button>
+</div></header>
+
+<main>
+<section class="service-hero">
+<div class="container">
+<div class="breadcrumb"><a href="../index.html">홈</a> / <a href="../index.html#services">웹 서비스</a> / 오목 게임</div>
+<div class="service-summary">
+<div>
+<span class="eyebrow">Fun Game · Omok</span>
+<h1>웹 브라우저에서 바로 즐기는<br><span class="gradient">2인용 오목 게임</span></h1>
+<p class="lead">AIRPALAB 오목은 HTML5, CSS3, JavaScript로 제작된 2인용 웹 오목 게임입니다. 별도 설치 없이 브라우저에서 실행할 수 있으며, 15×15 바둑판과 흑·백 교대 플레이, 최근 착수 표시, 승리 판정과 재시작 기능을 제공합니다.</p>
+<div class="actions">
+<a class="btn primary" href="https://airpa123.github.io/omok/" target="_blank" rel="noopener noreferrer">오목 게임 바로 실행 →</a>
+<a class="btn" href="../blog/omok-basics.html">오목 초보 가이드 읽기</a>
+</div>
+</div>
+<aside class="panel">
+<h2 style="font-size:1.4rem">서비스 한눈에 보기</h2>
+<p><strong>게임 방식</strong><br>한 기기에서 두 사람이 흑돌과 백돌을 번갈아 두는 방식입니다.</p>
+<p><strong>바둑판</strong><br>15×15 격자와 9개의 화점을 적용했습니다.</p>
+<p><strong>승리 조건</strong><br>가로·세로·대각선 중 같은 색 돌이 5개 이상 연속되면 승리합니다.</p>
+<p style="margin-bottom:0"><strong>현재 규칙</strong><br>33·44·장목 등 금수는 아직 적용하지 않은 일반 오목 방식입니다.</p>
+</aside>
+</div>
+</div>
+</section>
+
+<section class="section alt">
+<div class="container">
+<div class="section-head">
+<div class="kicker">Features</div>
+<h2>주요 기능</h2>
+<p class="muted">README에 정리된 실제 구현 내용을 기준으로 현재 제공되는 기능을 요약했습니다.</p>
+</div>
+<div class="feature-list">
+<div class="feature-item"><strong>15×15 표준 바둑판</strong><span class="muted">15개의 행과 열로 구성된 격자형 바둑판에서 플레이합니다.</span></div>
+<div class="feature-item"><strong>9개 화점 표시</strong><span class="muted">바둑판의 위치를 쉽게 파악할 수 있도록 기준점 역할을 하는 화점을 배치했습니다.</span></div>
+<div class="feature-item"><strong>입체적인 흑돌·백돌</strong><span class="muted">CSS radial-gradient를 이용해 단색 원보다 실제 돌에 가까운 입체감을 표현했습니다.</span></div>
+<div class="feature-item"><strong>최근 착수 위치 표시</strong><span class="muted">가장 최근에 놓인 돌 중앙에 붉은 표시가 나타나 직전 수를 쉽게 찾을 수 있습니다.</span></div>
+<div class="feature-item"><strong>실시간 차례 안내</strong><span class="muted">상태 영역에서 현재 흑돌 차례인지 백돌 차례인지 확인할 수 있습니다.</span></div>
+<div class="feature-item"><strong>승리 모달과 재시작</strong><span class="muted">승리 조건이 충족되면 결과를 안내하고 바로 새 게임을 시작할 수 있습니다.</span></div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container grid2">
+<article class="card">
+<div class="kicker">How to Play</div>
+<h2>게임 방법</h2>
+<ol class="rule-steps">
+<li><div><strong>게임 시작</strong><br><span class="muted">페이지를 열면 흑돌이 선공으로 시작합니다.</span></div></li>
+<li><div><strong>돌 놓기</strong><br><span class="muted">비어 있는 바둑판 교차점을 클릭하여 돌을 놓습니다.</span></div></li>
+<li><div><strong>교대 플레이</strong><br><span class="muted">흑돌과 백돌이 한 번씩 번갈아 착수합니다.</span></div></li>
+<li><div><strong>최근 수 확인</strong><br><span class="muted">마지막에 놓인 돌에는 붉은 점이 표시됩니다.</span></div></li>
+<li><div><strong>승리 판정</strong><br><span class="muted">가로·세로·두 대각선 중 한 방향으로 같은 색의 돌이 5개 이상 연결되면 승리합니다.</span></div></li>
+<li><div><strong>재시작</strong><br><span class="muted">상단 재시작 버튼 또는 승리 모달의 다시 하기 버튼으로 새 판을 시작할 수 있습니다.</span></div></li>
+</ol>
+</article>
+
+<article class="card">
+<div class="kicker">Rules</div>
+<h2>현재 적용되는 오목 규칙</h2>
+<p>현재 버전은 금수 규칙을 적용하지 않은 일반 오목 방식입니다. 흑돌이 먼저 두며, 어느 색이든 같은 방향으로 돌이 5개 이상 연속되면 승리로 판정합니다.</p>
+<div class="notice warn">
+<strong>알아두세요.</strong><br>
+렌주 규칙에서 사용하는 33, 44, 장목 등의 흑돌 금수는 현재 버전에는 적용되지 않았습니다. 따라서 공식 대회 규칙과는 차이가 있을 수 있습니다.
+</div>
+<p>친구나 가족과 한 기기에서 가볍게 두는 웹게임을 목적으로 하며, 규칙이 단순해 오목을 처음 접하는 사용자도 바로 시작할 수 있습니다.</p>
+</article>
+</div>
+</section>
+
+<section class="section alt">
+<div class="container">
+<div class="section-head">
+<div class="kicker">Technical Highlights</div>
+<h2>기술적으로 어떻게 구현했나요?</h2>
+<p class="muted">오목 서비스의 화면 구성과 승리 판정은 비교적 단순한 웹 기술로 구현되어 있습니다.</p>
+</div>
+<div class="grid3">
+<div class="tech-box">
+<h3>CSS Grid 기반 15×15 보드</h3>
+<p class="muted">CSS Grid로 15×15 셀을 배치하고 각 셀의 가상 요소를 이용해 교차선을 표현합니다. 돌은 셀의 중심에 놓이도록 배치됩니다.</p>
+</div>
+<div class="tech-box">
+<h3>radial-gradient 바둑돌</h3>
+<p class="muted">흑돌과 백돌에 방사형 그라데이션을 적용해 빛이 비치는 둥근 바둑돌처럼 보이도록 표현했습니다.</p>
+</div>
+<div class="tech-box">
+<h3>마지막 착수 중심 판정</h3>
+<p class="muted">매번 전체 바둑판을 모두 확인하기보다 마지막으로 놓인 돌을 기준으로 가로, 세로, 두 대각선의 연속 돌을 확인합니다.</p>
+</div>
+</div>
+
+<div class="notice" style="margin-top:20px">
+<strong>승리 판정의 핵심</strong><br>
+마지막 착수 지점에서 4개 방향을 확인하고, 각 방향의 양쪽에서 같은 색 돌이 몇 개 연속되는지 계산합니다. 연속 개수가 5개 이상이면 승리로 처리합니다.
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="container">
+<div class="section-head">
+<div class="kicker">Roadmap</div>
+<h2>향후 개선할 수 있는 기능</h2>
+<p class="muted">아래 항목은 현재 제공되는 기능이 아니라 README에 정리된 향후 개선 아이디어입니다.</p>
+</div>
+<div class="roadmap">
+<div class="card"><h3>33·44·장목 금수 규칙</h3><p>흑돌 선공의 유리함을 완화하는 일반 오목·렌주 계열의 금수 규칙을 추가할 수 있습니다.</p></div>
+<div class="card"><h3>무르기 기능</h3><p>직전 착수를 취소하고 한 수 되돌리는 편의 기능을 추가할 수 있습니다.</p></div>
+<div class="card"><h3>AI 대전</h3><p>미니맥스 또는 휴리스틱 평가 함수를 이용해 컴퓨터와 대국하는 모드를 확장할 수 있습니다.</p></div>
+<div class="card"><h3>온라인 1:1 대전</h3><p>WebSocket 또는 WebRTC 기반 실시간 네트워크 대전 기능으로 확장할 수 있습니다.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section alt">
+<div class="container grid2">
+<article class="card">
+<h2>처음 플레이한다면</h2>
+<p>규칙을 알고 있어도 공격만 이어가면 상대의 위협을 놓치기 쉽습니다. 돌을 두기 전에 가로, 세로, 두 대각선에서 상대가 다음 수에 어떤 모양을 만들 수 있는지 함께 확인해 보세요.</p>
+<a class="link" href="../blog/omok-basics.html">오목 초보자가 알아야 할 공격과 수비 읽기 →</a>
+</article>
+<article class="card">
+<h2>바로 게임 시작하기</h2>
+<p>별도의 설치나 회원가입 없이 새 창에서 AIRPALAB 오목 게임을 실행할 수 있습니다.</p>
+<a class="btn primary" href="https://airpa123.github.io/omok/" target="_blank" rel="noopener noreferrer">오목 게임 실행 →</a>
+</article>
+</div>
+</section>
+</main>
+
+<footer><div class="container"><div class="foot">
+<div><h3>AIRPALAB</h3><p>설치 없이 바로 쓰는 웹 도구와 활용 가이드를 제공합니다.</p><p>문의: hjkhs95@daum.net</p></div>
+<div><h3>콘텐츠</h3><div class="footlinks"><a href="../index.html#services">웹 서비스</a><a href="../blog/index.html">블로그</a><a href="../about.html">AIRPALAB 소개</a></div></div>
+<div><h3>정책</h3><div class="footlinks"><a href="../privacy.html">개인정보처리방침</a><a href="../terms.html">이용약관</a></div></div>
+</div><div class="copy">© 2026 AIRPALAB. All rights reserved.</div></div></footer>
+
+<script>
+const m=document.getElementById('menu'),n=document.getElementById('navlinks');
+if(m)m.onclick=()=>n.classList.toggle('open');
+</script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://charming-gaufre-ebe320.netlify.app/sitemap.xml
