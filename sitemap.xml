@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://sitemap.hjkhs.workers.dev/</loc></url>
   <url><loc>https://sitemap.hjkhs.workers.dev/about.html</loc></url>
@@ -15,7 +15,6 @@
   <url><loc>https://sitemap.hjkhs.workers.dev/blog/ai-cover-letter.html</loc></url>
   <url><loc>https://sitemap.hjkhs.workers.dev/blog/ai-ethics.html</loc></url>
   <url><loc>https://sitemap.hjkhs.workers.dev/blog/webapp-localstorage.html</loc></url>
-  <url><loc>https://sitemap.hjkhs.workers.dev/blog/airpalab-story.html</loc></url>
   <url><loc>https://sitemap.hjkhs.workers.dev/blog/airpalab-update.html</loc></url>
   <url><loc>https://sitemap.hjkhs.workers.dev/services/omok.html</loc></url>
   <url><loc>https://sitemap.hjkhs.workers.dev/services/minesweeper.html</loc></url>

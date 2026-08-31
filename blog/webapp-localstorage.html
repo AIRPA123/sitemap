@@ -12,8 +12,27 @@
 <div class="meta">AIRPALAB 운영자 · 직접 개발 및 검수 · 2026-08-08 · 기술 분석</div><p class="lead">간단한 웹 도구는 서버 계정 없이 브라우저의 로컬 저장소(localStorage)에 데이터를 보관할 수 있습니다. AIRPALAB에서 직접 테스트한 데이터를 바탕으로 저장소가 작동하는 원리와 실제 한계를 확인해 봅니다.</p>
 
 <h2 id="s1">AIRPALAB To-Do 데이터 실제 입력 테스트</h2><p>웹 서비스에 회원가입 없이 할 일을 등록하면 데이터는 어디에 남을까요? 크롬(Chrome) 브라우저를 켜고 AIRPALAB To-Do 서비스에 직접 "애드센스 글 수정"이라는 할 일을 등록해 보았습니다.</p><p>입력 후 개발자 도구(F12)를 열어 <strong>Application → Local Storage</strong> 탭을 확인하면 아래와 같이 데이터가 실제 기기에 저장된 것을 볼 수 있습니다.</p>
-<pre><code>Key: airpa_todo_list
-Value: [{"id":1725170000000,"text":"애드센스 글 수정","done":false}]</code></pre>
+<div style="border:1px solid #ccc; border-radius:4px; font-family:-apple-system, BlinkMacSystemFont, sans-serif; font-size:12px; margin:20px 0; overflow:hidden;">
+  <div style="background:#f1f3f4; padding:8px 12px; border-bottom:1px solid #ccc; font-weight:bold; color:#333; display:flex; gap:15px;">
+    <span>Elements</span><span>Console</span><span>Sources</span><span>Network</span><span>Performance</span><span style="color:#1a73e8; border-bottom:2px solid #1a73e8;">Application</span>
+  </div>
+  <div style="display:flex;">
+    <div style="width:200px; border-right:1px solid #ccc; padding:10px; background:#fafafa; color:#555;">
+      ▼ Storage<br>
+      &nbsp;&nbsp;▼ Local Storage<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;📄 https://sitemap.hjkhs...<br>
+      &nbsp;&nbsp;▶ Session Storage<br>
+      &nbsp;&nbsp;▶ IndexedDB<br>
+    </div>
+    <div style="flex:1; padding:0;">
+      <table style="width:100%; border-collapse:collapse; text-align:left;">
+        <tr style="background:#f1f3f4; border-bottom:1px solid #ccc;"><th style="padding:4px 8px; border-right:1px solid #ccc; font-weight:normal;">Key</th><th style="padding:4px 8px; font-weight:normal;">Value</th></tr>
+        <tr style="background:#fff;"><td style="padding:4px 8px; border-right:1px solid #ccc; border-bottom:1px solid #eee;">airpa_todo_list</td><td style="padding:4px 8px; border-bottom:1px solid #eee; color:#c80000;">[{"id":1725170000000,"text":"애드센스 글 수정","done":false}]</td></tr>
+        <tr style="background:#f9f9f9;"><td style="padding:4px 8px; border-right:1px solid #ccc; border-bottom:1px solid #eee;">theme</td><td style="padding:4px 8px; border-bottom:1px solid #eee; color:#c80000;">"dark"</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
 <p>이 데이터는 인터넷 서버로 전송되지 않고 현재 사용 중인 브라우저에만 머물러 있습니다. 새로고침을 하거나 브라우저를 종료한 뒤 다음 날 다시 접속해도 데이터는 그대로 유지됩니다.</p>
 
 <h2 id="s2">간단한 JavaScript 코드로 확인하기</h2><p>개발자 도구의 <strong>Console</strong> 탭에서 직접 코드를 입력해 보면 로컬 저장소의 원리를 명확하게 이해할 수 있습니다.</p>
